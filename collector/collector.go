@@ -675,10 +675,20 @@ func (c *collector) CollectMetrics(mts []plugin.Metric) ([]plugin.Metric, error)
 		if rid != "root" {
 			if len(metrics[i].Tags) == 0 {
 				metrics[i].Tags = c.containers[rid].Specification.Labels
+				for lkey, _ := range metrics[i].Tags {
+					if strings.HasPrefix(lkey, "annotation.kubernetes.io") || strings.HasPrefix(lkey, "annotation.scheduler.alpha.kubernetes.io") {
+						delete(metrics[i].Tags, lkey)
+					}
+				}
 			} else {
 				// adding labels one by one to existing tags
 				for lkey, lval := range c.containers[rid].Specification.Labels {
-					metrics[i].Tags[lkey] = lval
+					// Currently kubernetes adds labels to docker containers with annotations
+					// that contains JSON text. This causes influx problems as it's not able to parse the value.
+					// For now, just disable all annotation namespace labels.
+					if !strings.HasPrefix(lkey, "annotation.kubernetes.io") && !strings.HasPrefix(lkey, "annotation.scheduler.alpha.kubernetes.io") {
+						metrics[i].Tags[lkey] = lval
+					}
 				}
 			}
 		}
