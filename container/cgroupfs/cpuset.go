@@ -24,7 +24,7 @@ package cgroupfs
 import (
 	"path/filepath"
 
-	"github.com/intelsdi-x/snap-plugin-collector-docker/container"
+	"github.com/hyperpilotio/snap-plugin-collector-docker/container"
 )
 
 // CpuSet implements StatGetter interface
