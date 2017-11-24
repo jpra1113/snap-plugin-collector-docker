@@ -22,11 +22,12 @@ limitations under the License.
 package cgroupfs
 
 import (
+	"os"
 	"path/filepath"
 	"strconv"
 	"strings"
 
-	"github.com/intelsdi-x/snap-plugin-collector-docker/container"
+	"github.com/hyperpilotio/snap-plugin-collector-docker/container"
 )
 
 // Pids implements StatGetter interface
@@ -39,12 +40,22 @@ func (p *Pids) GetStats(stats *container.Statistics, opts container.GetStatOpt) 
 		return err
 	}
 
-	current, err := parseIntValue(filepath.Join(path, "pids.current"))
+	pidsCurrentPath := filepath.Join(path, "pids.current")
+	if _, err := os.Stat(pidsCurrentPath); os.IsNotExist(err) {
+		return nil
+	}
+
+	current, err := parseIntValue(pidsCurrentPath)
 	if err != nil {
 		return err
 	}
 
-	limit, err := parseStrValue(filepath.Join(path, "pids.max"))
+	pidsMaxPath := filepath.Join(path, "pids.max")
+	if _, err := os.Stat(pidsMaxPath); os.IsNotExist(err) {
+		return nil
+	}
+
+	limit, err := parseStrValue(pidsMaxPath)
 	if err != nil {
 		return err
 	}
