@@ -46,7 +46,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/intelsdi-x/snap-plugin-collector-docker/container"
+	"github.com/hyperpilotio/snap-plugin-collector-docker/container"
 	utils "github.com/intelsdi-x/snap-plugin-utilities/ns"
 
 	log "github.com/Sirupsen/logrus"

@@ -55,8 +55,8 @@ import (
 	zfs "github.com/mistifyio/go-zfs"
 	"github.com/moby/moby/pkg/mount"
 
-	"github.com/intelsdi-x/snap-plugin-collector-docker/config"
-	"github.com/intelsdi-x/snap-plugin-collector-docker/container"
+	"github.com/hyperpilotio/snap-plugin-collector-docker/config"
+	"github.com/hyperpilotio/snap-plugin-collector-docker/container"
 )
 
 const (

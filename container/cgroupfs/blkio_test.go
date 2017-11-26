@@ -27,7 +27,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/intelsdi-x/snap-plugin-collector-docker/container"
+	"github.com/hyperpilotio/snap-plugin-collector-docker/container"
 	. "github.com/smartystreets/goconvey/convey"
 	"github.com/stretchr/testify/suite"
 )

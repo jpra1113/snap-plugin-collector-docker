@@ -48,7 +48,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/intelsdi-x/snap-plugin-collector-docker/container"
+	"github.com/hyperpilotio/snap-plugin-collector-docker/container"
 )
 
 // Blkio implements StatGetter interface

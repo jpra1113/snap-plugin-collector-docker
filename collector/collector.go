@@ -31,10 +31,10 @@ import (
 	docker "github.com/fsouza/go-dockerclient"
 	utils "github.com/intelsdi-x/snap-plugin-utilities/ns"
 
-	"github.com/intelsdi-x/snap-plugin-collector-docker/container"
-	"github.com/intelsdi-x/snap-plugin-collector-docker/container/cgroupfs"
-	"github.com/intelsdi-x/snap-plugin-collector-docker/container/fs"
-	"github.com/intelsdi-x/snap-plugin-collector-docker/container/network"
+	"github.com/hyperpilotio/snap-plugin-collector-docker/container"
+	"github.com/hyperpilotio/snap-plugin-collector-docker/container/cgroupfs"
+	"github.com/hyperpilotio/snap-plugin-collector-docker/container/fs"
+	"github.com/hyperpilotio/snap-plugin-collector-docker/container/network"
 	"github.com/intelsdi-x/snap-plugin-lib-go/v1/plugin"
 )
 
