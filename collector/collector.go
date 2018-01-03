@@ -35,7 +35,7 @@ import (
 	"github.com/hyperpilotio/snap-plugin-collector-docker/container/cgroupfs"
 	"github.com/hyperpilotio/snap-plugin-collector-docker/container/fs"
 	"github.com/hyperpilotio/snap-plugin-collector-docker/container/network"
-	"github.com/intelsdi-x/snap-plugin-lib-go/v1/plugin"
+	"github.com/jpra1113/snap-plugin-lib-go/v1/plugin"
 )
 
 const (

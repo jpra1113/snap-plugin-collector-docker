@@ -34,7 +34,7 @@ import (
 
 	"github.com/hyperpilotio/snap-plugin-collector-docker/container"
 	. "github.com/hyperpilotio/snap-plugin-collector-docker/mocks"
-	"github.com/intelsdi-x/snap-plugin-lib-go/v1/plugin"
+	"github.com/jpra1113/snap-plugin-lib-go/v1/plugin"
 )
 
 var mockDockerID = "a26c852ce22c"

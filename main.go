@@ -22,12 +22,23 @@ limitations under the License.
 package main
 
 import (
-	"github.com/intelsdi-x/snap-plugin-lib-go/v1/plugin"
+	"github.com/jpra1113/snap-plugin-lib-go/v1/plugin"
 
 	"github.com/hyperpilotio/snap-plugin-collector-docker/collector"
+	"google.golang.org/grpc"
+)
+
+const (
+	maxMessageSize = 100 << 20
 )
 
 func main() {
-
-	plugin.StartCollector(collector.New(), collector.PLUGIN_NAME, collector.PLUGIN_VERSION)
+	plugin.StartCollector(
+		collector.New(),
+		collector.PLUGIN_NAME,
+		collector.PLUGIN_VERSION,
+		plugin.GRPCServerOptions(grpc.MaxMsgSize(maxMessageSize)),
+		plugin.GRPCServerOptions(grpc.MaxSendMsgSize(maxMessageSize)),
+		plugin.GRPCServerOptions(grpc.MaxRecvMsgSize(maxMessageSize)),
+	)
 }
