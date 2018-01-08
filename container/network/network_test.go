@@ -30,7 +30,7 @@ import (
 
 	. "github.com/smartystreets/goconvey/convey"
 
-	"github.com/hyperpilotio/snap-plugin-collector-docker/container"
+	"github.com/jpra1113/snap-plugin-collector-docker/container"
 )
 
 const (

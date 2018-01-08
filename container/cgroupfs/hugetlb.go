@@ -27,7 +27,7 @@ import (
 	"strings"
 
 	"github.com/docker/go-units"
-	"github.com/hyperpilotio/snap-plugin-collector-docker/container"
+	"github.com/jpra1113/snap-plugin-collector-docker/container"
 )
 
 var hpControlDir = "/sys/kernel/mm/hugepages"

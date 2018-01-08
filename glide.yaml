@@ -1,4 +1,4 @@
-package: github.com/hyperpilotio/snap-plugin-collector-docker
+package: github.com/jpra1113/snap-plugin-collector-docker
 import:
 - package: github.com/Sirupsen/logrus
   version: ^0.11.5

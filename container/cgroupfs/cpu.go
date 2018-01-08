@@ -30,7 +30,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/hyperpilotio/snap-plugin-collector-docker/container"
+	"github.com/jpra1113/snap-plugin-collector-docker/container"
 )
 
 // Cpu implements StatGetter interface

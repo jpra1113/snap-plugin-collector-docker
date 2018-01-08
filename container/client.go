@@ -33,7 +33,7 @@ import (
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/fsouza/go-dockerclient"
-	"github.com/hyperpilotio/snap-plugin-collector-docker/config"
+	"github.com/jpra1113/snap-plugin-collector-docker/config"
 )
 
 const (
